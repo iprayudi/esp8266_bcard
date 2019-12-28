@@ -1,0 +1,368 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L jdunmire:ESP-12F U1
+U 1 1 5E044524
+P 9300 2500
+F 0 "U1" H 9300 3265 50  0000 C CNN
+F 1 "ESP-12F" H 9300 3174 50  0000 C CNN
+F 2 "jdunmire:ESP-12E" H 9300 2500 50  0001 C CNN
+F 3 "" H 9300 2500 50  0001 C CNN
+	1    9300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:NCP1117-3.3_SOT223 U2
+U 1 1 5E04750E
+P 4700 1300
+F 0 "U2" H 4700 1633 50  0000 C CNN
+F 1 "NCP1117ST33T3G" H 4700 1542 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4700 1500 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 4800 1050 50  0001 C CNN
+F 4 "C26537" H 4700 1451 50  0000 C CNN "LCSC"
+	1    4700 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5E04C0C0
+P 4050 1450
+F 0 "C1" H 4142 1496 50  0000 L CNN
+F 1 "10uF 25V" H 4142 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4050 1450 50  0001 C CNN
+F 3 "~" H 4050 1450 50  0001 C CNN
+F 4 "C15850" H 4050 1450 50  0001 C CNN "LCSC"
+	1    4050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5E04CCB3
+P 5200 1450
+F 0 "C2" H 5292 1496 50  0000 L CNN
+F 1 "10uF 25V" H 5292 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5200 1450 50  0001 C CNN
+F 3 "~" H 5200 1450 50  0001 C CNN
+F 4 "C15850" H 5200 1450 50  0001 C CNN "LCSC"
+	1    5200 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1350 4050 1300
+Wire Wire Line
+	4050 1300 4400 1300
+Wire Wire Line
+	5000 1300 5200 1300
+Wire Wire Line
+	5200 1300 5200 1350
+Wire Wire Line
+	4050 1550 4050 1650
+Wire Wire Line
+	4050 1650 4700 1650
+Wire Wire Line
+	4700 1650 4700 1600
+Wire Wire Line
+	5200 1550 5200 1650
+Wire Wire Line
+	5200 1650 4700 1650
+Connection ~ 4700 1650
+Text Label 5200 1300 0    50   ~ 0
+3.3V
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5E04E2BB
+P 2500 1400
+F 0 "J1" H 2418 1717 50  0000 C CNN
+F 1 "USB-A_PCB-Traces" H 2418 1626 50  0000 C CNN
+F 2 "wickerlib:CONN-USB-A-PCB-TRACES" H 2500 1400 50  0001 C CNN
+F 3 "~" H 2500 1400 50  0001 C CNN
+	1    2500 1400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1300 3150 1300
+Wire Wire Line
+	2700 1600 3150 1600
+Text Label 3150 1600 0    50   ~ 0
+GND
+Text Label 3150 1300 0    50   ~ 0
+VUSB
+Text Label 4050 1300 0    50   ~ 0
+VUSB
+Text Label 4850 1650 0    50   ~ 0
+GND
+Wire Wire Line
+	10200 2900 10450 2900
+Wire Wire Line
+	8400 2900 8150 2900
+Text Label 10450 2900 0    50   ~ 0
+GND
+Text Label 8150 2900 0    50   ~ 0
+3.3V
+Wire Wire Line
+	8400 2200 8150 2200
+Text Label 8150 2200 0    50   ~ 0
+nRST
+$Comp
+L Device:R_Small R1
+U 1 1 5E053583
+P 6500 1400
+F 0 "R1" H 6559 1446 50  0000 L CNN
+F 1 "470" H 6559 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6500 1400 50  0001 C CNN
+F 3 "~" H 6500 1400 50  0001 C CNN
+F 4 "C17710" H 6500 1400 50  0001 C CNN "LCSC"
+	1    6500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E053F5A
+P 6500 1850
+F 0 "SW1" V 6454 1998 50  0000 L CNN
+F 1 "SW_Push" V 6545 1998 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KSC7xxJ" H 6500 2050 50  0001 C CNN
+F 3 "~" H 6500 2050 50  0001 C CNN
+F 4 "C318884" V 6500 1850 50  0001 C CNN "LCSC"
+	1    6500 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 1300 6500 1150
+Wire Wire Line
+	6500 1150 6600 1150
+Wire Wire Line
+	6500 2050 6500 2200
+Wire Wire Line
+	6500 2200 6600 2200
+Wire Wire Line
+	6500 1500 6500 1650
+Text Label 6600 2200 0    50   ~ 0
+GND
+Text Label 6600 1150 0    50   ~ 0
+nRST
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5E0577B3
+P 2500 2450
+F 0 "J2" H 2418 2967 50  0000 C CNN
+F 1 "Prog_conn" H 2418 2876 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2500 2450 50  0001 C CNN
+F 3 "~" H 2500 2450 50  0001 C CNN
+	1    2500 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2150 3150 2150
+Wire Wire Line
+	2700 2250 3150 2250
+Wire Wire Line
+	2700 2350 3150 2350
+Wire Wire Line
+	2700 2450 3150 2450
+Wire Wire Line
+	2700 2550 3150 2550
+Wire Wire Line
+	2700 2650 3150 2650
+Wire Wire Line
+	2700 2750 3150 2750
+Wire Wire Line
+	2700 2850 3150 2850
+Text Label 3150 2850 0    50   ~ 0
+3.3V
+Text Label 3150 2750 0    50   ~ 0
+GND
+Text Label 3150 2150 0    50   ~ 0
+nRST
+Text Label 3150 2550 0    50   ~ 0
+TX
+Text Label 3150 2650 0    50   ~ 0
+RX
+Text Label 3150 2350 0    50   ~ 0
+GPIO0
+Text Label 3150 2450 0    50   ~ 0
+GPIO15
+Text Label 3150 2250 0    50   ~ 0
+EN
+$Comp
+L Device:R_Small R2
+U 1 1 5E05E412
+P 6750 2800
+F 0 "R2" V 6554 2800 50  0000 C CNN
+F 1 "10K" V 6645 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 2800 50  0001 C CNN
+F 3 "~" H 6750 2800 50  0001 C CNN
+F 4 "C17414" H 6750 2800 50  0001 C CNN "LCSC"
+	1    6750 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5E05F06C
+P 6750 3100
+F 0 "R3" V 6554 3100 50  0000 C CNN
+F 1 "10K" V 6645 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 3100 50  0001 C CNN
+F 3 "~" H 6750 3100 50  0001 C CNN
+F 4 "C17414" H 6750 3100 50  0001 C CNN "LCSC"
+	1    6750 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5E05F3B9
+P 6750 3400
+F 0 "R4" V 6554 3400 50  0000 C CNN
+F 1 "10K" V 6645 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 3400 50  0001 C CNN
+F 3 "~" H 6750 3400 50  0001 C CNN
+F 4 "C17414" H 6750 3400 50  0001 C CNN "LCSC"
+	1    6750 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5E05F638
+P 6750 3700
+F 0 "R5" V 6554 3700 50  0000 C CNN
+F 1 "10K" V 6645 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 3700 50  0001 C CNN
+F 3 "~" H 6750 3700 50  0001 C CNN
+F 4 "C17414" H 6750 3700 50  0001 C CNN "LCSC"
+	1    6750 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5E05F987
+P 6750 4000
+F 0 "R6" V 6554 4000 50  0000 C CNN
+F 1 "10K" V 6645 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 4000 50  0001 C CNN
+F 3 "~" H 6750 4000 50  0001 C CNN
+F 4 "C17414" H 6750 4000 50  0001 C CNN "LCSC"
+	1    6750 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2800 7000 2800
+Wire Wire Line
+	6850 3100 7000 3100
+Wire Wire Line
+	6850 3400 7000 3400
+Wire Wire Line
+	6650 3400 6500 3400
+Wire Wire Line
+	6500 3400 6500 3100
+Wire Wire Line
+	6500 3100 6650 3100
+Wire Wire Line
+	6650 2800 6500 2800
+Wire Wire Line
+	6500 2800 6500 3100
+Connection ~ 6500 3100
+Text Label 6350 2700 0    50   ~ 0
+3.3V
+Wire Wire Line
+	6350 2700 6500 2700
+Wire Wire Line
+	6500 2700 6500 2800
+Connection ~ 6500 2800
+Wire Wire Line
+	6650 4000 6350 4000
+Text Label 6350 4000 0    50   ~ 0
+GND
+Wire Wire Line
+	6850 4000 7000 4000
+Text Label 7000 2800 0    50   ~ 0
+GPIO0
+Text Label 7000 4000 0    50   ~ 0
+GPIO15
+Text Label 7000 3100 0    50   ~ 0
+EN
+Wire Wire Line
+	8400 2400 8150 2400
+Text Label 8150 2400 0    50   ~ 0
+EN
+Wire Wire Line
+	10200 2800 10450 2800
+Wire Wire Line
+	10200 2700 10450 2700
+Wire Wire Line
+	10200 2600 10450 2600
+Wire Wire Line
+	10200 2200 10450 2200
+Wire Wire Line
+	10200 2300 10450 2300
+Text Label 10450 2200 0    50   ~ 0
+TX
+Text Label 10450 2300 0    50   ~ 0
+RX
+Text Label 10450 2600 0    50   ~ 0
+GPIO0
+Text Label 10450 2700 0    50   ~ 0
+GPIO2
+Text Label 10450 2800 0    50   ~ 0
+GPIO15
+Text Label 7000 3400 0    50   ~ 0
+GPIO2
+Wire Wire Line
+	6650 3700 6500 3700
+Wire Wire Line
+	6500 3700 6500 3400
+Connection ~ 6500 3400
+Wire Wire Line
+	6850 3700 7000 3700
+Text Label 7000 3700 0    50   ~ 0
+nRST
+$Comp
+L Device:R_Small R7
+U 1 1 5E07CE08
+P 6100 1400
+F 0 "R7" H 6159 1446 50  0000 L CNN
+F 1 "470" H 6159 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6100 1400 50  0001 C CNN
+F 3 "~" H 6100 1400 50  0001 C CNN
+F 4 "C17710" H 6100 1400 50  0001 C CNN "LCSC"
+	1    6100 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 1300 6100 1150
+Wire Wire Line
+	6100 1150 6250 1150
+Text Label 6250 1150 0    50   ~ 0
+3.3V
+$Comp
+L Device:LED D1
+U 1 1 5E07E56F
+P 6100 1800
+F 0 "D1" V 6139 1683 50  0000 R CNN
+F 1 "LED" V 6048 1683 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6100 1800 50  0001 C CNN
+F 3 "~" H 6100 1800 50  0001 C CNN
+F 4 "C2297" V 6100 1800 50  0001 C CNN "LCSC"
+	1    6100 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 1650 6100 1500
+Wire Wire Line
+	6100 1950 6100 2200
+Wire Wire Line
+	6100 2200 6500 2200
+Connection ~ 6500 2200
+$EndSCHEMATC
